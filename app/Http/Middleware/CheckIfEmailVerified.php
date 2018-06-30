@@ -18,7 +18,7 @@ class CheckIfEmailVerified
         if (!$request->user()->email_verified){
 
             return redirect(route('email_verify_notice'));
-            
+
         }
         return $next($request);
     }
